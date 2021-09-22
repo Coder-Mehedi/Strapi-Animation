@@ -1,38 +1,165 @@
-.App {
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  margin: 0;
+}
+.hero {
+  min-height: calc(100vh + 250px);
+  background: #1e1d80 url('hero.svg') no-repeat right top;
+}
+.heroContentContainer {
+  padding-top: 10rem;
+  position: relative;
+  max-width: 55%;
+  margin: 0 auto;
+}
+.heroContentContainer h1 {
+  font-size: 53px;
+  max-width: 740px;
+  color: #fff;
+}
+.heroContentContainer p {
+  color: #fff;
+  max-width: 400px;
+  word-break: break-word;
+  white-space: pre-line;
+  font-size: 17px;
+  line-height: 28px;
+}
+.svgLoadingContainer {
+  margin-top: 110px;
+  position: absolute;
+}
+.webLoading {
+  position: relative;
+  right: 90px;
+  top: 20px;
+}
+.mobileLoading {
+  position: absolute;
+  right: -65px;
+  top: 0;
+}
+.button {
+  border-radius: 10px;
+  padding: 16px 40px;
+  border: none;
+  outline: none;
+  margin-right: 40px;
+  margin-top: 40px;
+  background: #8c4bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button:hover {
+  scale: 2;
+}
+.tryLiveDemo {
+  background: #fee895;
+  color: #1e1d80;
+  font-weight: 400;
+}
+/* how does it work component */
+
+.gradientHeaderWithIntro {
+  margin: 100px auto 200px auto;
+
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+}
+.sectionHeaderContent {
   text-align: center;
+  background: linear-gradient(165deg, #ebf4fd, hsla(0, 0%, 100%, 0) 45%);
+  margin: 0 120px;
+  padding: 60px 0 105px;
+}
+.gradientHeaderWithIntro .sectionHeaderContent h6 {
+  color: #8c4bff;
+  font-size: 13px;
+}
+.gradientHeaderWithIntro .sectionHeaderContent h1 {
+  color: #1d1b84;
+  font-size: 43px;
+}
+.gradientHeaderWithIntro .sectionHeaderContent h2 {
+  color: #344b80;
+  font-size: 21px;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* slide area */
+.slideArea {
+  padding: 40px 0;
+  position: sticky;
+  top: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.triangle {
+  width: 40%;
+  position: absolute;
+  transition: all 1.2s ease;
+  top: 20%;
+  left: 0;
+  z-index: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.base {
+  position: relative;
+  z-index: 1;
+}
+.animationContent {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  perspective: 1800px;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  height: 100vh;
+}
+.baseImgContainer {
+  position: relative;
+  will-change: transform;
+  width: 50%;
+  transform-origin: center top;
+
+  transform: rotateY(15deg) rotateX(10deg);
+  position: sticky;
+  top: 100px;
+  z-index: 1;
+}
+.imgContainer {
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.background {
+  width: 115%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background img {
+  width: 100%;
+}
+.step1 {
+  position: absolute;
+  bottom: 40px;
+  right: -75px;
+  z-index: 1;
+  width: 80%;
+}
+.stepContent {
+  width: 35%;
+}
+.stepContent h3 {
+  color: #f6b73e;
+}
+.stepContent h1 {
+  color: #1d1b84;
+}
+.stepContent p {
+  color: #344b80;
+}
+.step2content {
+  /* padding: 900px 0; */
 }
