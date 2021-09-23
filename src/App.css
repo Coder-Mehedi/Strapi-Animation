@@ -75,7 +75,7 @@ h1 {
   text-align: center;
   background: linear-gradient(165deg, #ebf4fd, hsla(0, 0%, 100%, 0) 45%);
   margin: 0 120px;
-  padding: 60px 0 105px;
+  padding: 60px 0 50px;
 }
 .gradientHeaderWithIntro .sectionHeaderContent h6 {
   color: #8c4bff;
@@ -94,16 +94,22 @@ h1 {
 /* slide area */
 .slideArea {
   padding: 40px 0;
-  position: sticky;
-  top: 20px;
+  /* position: sticky; */
+  /* top: 20px; */
 }
 .triangle {
   width: 40%;
   position: absolute;
   transition: all 1.2s ease;
   top: 20%;
-  left: 0;
   z-index: 0;
+}
+.triangleLeft {
+  left: 0;
+}
+.triangleRight {
+  right: 0;
+  transform: rotate(90deg);
 }
 .base {
   position: relative;
@@ -115,8 +121,8 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   perspective: 1800px;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   margin: 0;
   height: 100vh;
 }
@@ -127,7 +133,7 @@ h1 {
   transform-origin: center top;
 
   transform: rotateY(15deg) rotateX(10deg);
-  position: sticky;
+  /* position: sticky; */
   top: 100px;
   z-index: 1;
 }
@@ -161,5 +167,15 @@ h1 {
   color: #344b80;
 }
 .step2content {
-  /* padding: 900px 0; */
+  position: relative;
+  padding: 200px 0;
+  width: 35%;
+}
+.step2content .triangle {
+  right: 0;
+  left: unset;
+}
+.stepContent.step2 {
+  position: relative;
+  width: 100%;
 }
