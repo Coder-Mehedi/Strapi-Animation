@@ -9,7 +9,7 @@ const HowDoesItWork = () => {
   const { scrollYProgress } = useViewportScroll();
   const triangleY = useTransform(scrollYProgress, [0, 1], [0, -250]);
   const triangle2Y = useTransform(scrollYProgress, [0, 2], [800, -600]);
-  const triangle3Y = useTransform(scrollYProgress, [0, 1], [6600, 500]);
+  const triangle3Y = useTransform(scrollYProgress, [0, 3], [300, -200]);
 
   const { ref: step2Ref, inView: step2InView } = useInView({
     threshold: 0.6,
@@ -38,6 +38,11 @@ const HowDoesItWork = () => {
                 ? {
                     x: '100%',
                     y: '100%',
+                  }
+                : step3InView
+                ? {
+                    x: 0,
+                    y: '200%',
                   }
                 : { rotateX: 5, rotateY: 10 }
             }
@@ -90,16 +95,18 @@ const HowDoesItWork = () => {
               }}
             />
           </div>
-          <div className='stepContent step2'>
+          <div className='stepContent step3' ref={step3Ref}>
             <motion.img
               src={triangle}
-              className='triangle triangleLeft'
-              // style={{
-              //   y: triangle3Y,
-              // }}
+              className='triangle triangleDown'
+              style={{
+                y: triangle3Y,
+                rotate: 90,
+                // top: -100,
+              }}
             />
             <div className='step3content'>
-              <h3>Step. 1</h3>
+              <h3>Step. 3</h3>
               <h1>
                 Effortlessly create content structures that flex to your needs
               </h1>

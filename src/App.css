@@ -109,6 +109,8 @@ h1 {
 }
 .triangleRight {
   right: 0;
+}
+.triangleDown {
   transform: rotate(90deg);
 }
 .base {
@@ -178,4 +180,21 @@ h1 {
 .stepContent.step2 {
   position: relative;
   width: 100%;
+}
+.stepContent.step3 {
+  position: relative;
+  width: 100%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.step3content {
+  position: relative;
+  padding: 200px 0;
+  width: 35%;
+  right: 0;
+}
+.step3 .triangle {
+  position: relative;
 }
