@@ -46,7 +46,7 @@ const HowDoesItWork = () => {
                   }
                 : { rotateX: 5, rotateY: 10 }
             }
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, type: 'spring', mass: 0.5 }}
           >
             <div className='imgContainer'>
               <div className='background'>
