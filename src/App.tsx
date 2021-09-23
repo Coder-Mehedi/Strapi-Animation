@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
 import './App.css';
 import deskLoader from './desktopSkeletonLoading.svg';
 import mobile from './mobileSkeletonLoading.svg';
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion';
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import Button from './components/button';
 import HowDoesItWork from './components/how-does-it-work';
 
